@@ -5,7 +5,7 @@ import Menu from './Menu';
 import PlayerVsPlayer from './PlayerVsPlayer';
 import PlayerVsBot from './PlayerVsBot';
 import DifficultySelection from './DifficultySelection';
-import AudioPlayer from './Components/MusicControl';
+import AudioPlayer from './components/MusicControl';
 import './App.css'; // Verifique o caminho para o arquivo CSS
 
 
