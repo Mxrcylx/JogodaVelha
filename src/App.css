@@ -1,0 +1,156 @@
+/* Aplicar uma cor de fundo leve e um gradiente para o corpo */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #b3e5fc); /* Gradiente suave em tons de azul */
+}
+
+/* Estilo do menu com uma borda e um fundo divertido */
+.menu {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da modal com sombra e bordas arredondadas */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Estilo do tabuleiro */
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo dos quadrados com bordas arredondadas e transições suaves */
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #81d4fa; /* Azul claro */
+  border: 2px solid #039be5; /* Azul escuro */
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Alterar a cor de fundo e adicionar uma leve escala no hover */
+.square:hover {
+  background-color: #4fc3f7; /* Azul um pouco mais escuro */
+  transform: scale(1.1);
+}
+
+/* Estilo do texto de status */
+.status {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #0277bd; /* Azul escuro */
+  font-weight: bold;
+}
+
+/* Botões com um estilo moderno e coerente */
+button {
+  background-color: #0288d1; /* Azul forte */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Alterar a cor de fundo e adicionar uma leve escala no hover dos botões */
+button:hover {
+  background-color: #0277bd; /* Azul mais escuro */
+  transform: scale(1.05);
+}
+
+/* Estilizar o botão de reinício do jogo */
+button.reset {
+  background-color: #d32f2f; /* Vermelho para destaque */
+}
+
+button.reset:hover {
+  background-color: #c62828; /* Vermelho mais escuro */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    font-size: 1.5em;
+  }
+
+  .status {
+    font-size: 1.2em;
+  }
+
+  .modal {
+    width: 80%;
+    padding: 10px;
+  }
+}
+
+/* Estilos para o componente de controle de música */
+.music-control {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.music-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.music-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Opções para adicionar hover */
+.music-button:hover .music-icon {
+  opacity: 0.8;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.square.animate {
+  animation: jump 0.5s ease;
+}
